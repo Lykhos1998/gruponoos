@@ -653,3 +653,11 @@ p { margin: 0 0 1em; color: rgba(240, 245, 239, 0.74); }
 @media (hover: none) {
   .client-card .logo-tile .mono { opacity: .8; }
 }
+
+/* Tarjeta de llamada a la acción al final de clientes */
+.client-cta { display: block; }
+.client-cta > .sector { margin-top: 16px; }
+.client-cta .logo-tile { border-style: dashed; border-color: rgba(142,245,168,.35); }
+.client-cta .logo-tile img { filter: drop-shadow(0 0 18px rgba(142,245,168,.3)); }
+.client-cta .logo-tile .mono { opacity: .85; }
+.client-cta .link-arrow { display: inline-flex; margin-top: 8px; }

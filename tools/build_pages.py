@@ -188,7 +188,6 @@ CLIENTS = [
  ("metro", "Metro CDMX", "Sistema de Transporte Colectivo", "Gobierno CDMX"),
  ("wandel", "Farmacéutica Wandel", "Industria farmacéutica", "Sector privado"),
  ("biomep", "BIOMEP", "Sector salud", "Sector privado"),
- ("stratominds", "Stratominds", "Potencializa tu mente", "Sector privado"),
 ]
 
 def logo_tile(slug, name, hidden=False):
@@ -252,7 +251,7 @@ index = head("Grupo Noos | Seguridad Privada en CDMX",
   <div class="stat reveal"><strong><em>SSC</em></strong><span>Permiso oficial vigente para prestar servicios de seguridad privada en CDMX</span></div>
   <div class="stat reveal" data-delay="1"><strong><span data-count="100">100</span><em>%</em></strong><span>De satisfacción de nuestros clientes</span></div>
   <div class="stat reveal" data-delay="2"><strong><span data-count="26">26</span><em>+</em></strong><span>Años de experiencia de nuestro instructor en Krav Magá israelí</span></div>
-  <div class="stat reveal" data-delay="3"><strong><span data-count="8">8</span><em>+</em></strong><span>Instituciones públicas y empresas que confían en nosotros</span></div>
+  <div class="stat reveal" data-delay="3"><strong><span data-count="7">7</span><em>+</em></strong><span>Instituciones públicas y empresas que confían en nosotros</span></div>
 </section>
 
 <section class="section">
@@ -324,7 +323,7 @@ index = head("Grupo Noos | Seguridad Privada en CDMX",
     <div class="sector-strip reveal">
       <span><strong>4</strong> dependencias federales</span>
       <span><strong>1</strong> organismo de la CDMX</span>
-      <span><strong>3</strong> empresas privadas</span>
+      <span><strong>2</strong> empresas privadas</span>
       <a class="link-arrow" href="nosotros.html#clientes">Ver todos {I["arrow"]}</a>
     </div>
   </div>
@@ -429,6 +428,10 @@ nosotros = head("Nosotros | Grupo Noos Seguridad Privada",
     </div>
     <div class="client-cards">
 {client_cards()}
+      <a class="client-card client-cta reveal" data-delay="3" href="contacto.html">
+        <div class="logo-tile"><img class="mono" src="assets/img/logo-grupo-noos.webp" alt="" loading="lazy"><img class="color" src="assets/img/logo-grupo-noos.webp" alt="" loading="lazy"></div>
+        <span class="sector">Próximo cliente</span><strong>Su empresa aquí</strong><small>Solicite una propuesta de seguridad a la medida. <span class="link-arrow">Cotizar {I["arrow"]}</span></small>
+      </a>
     </div>
   </div>
 </section>
