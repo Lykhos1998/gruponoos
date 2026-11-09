@@ -250,7 +250,7 @@ index = head("Grupo Noos | Seguridad Privada en CDMX",
 <section class="stats" aria-label="Grupo Noos en cifras">
   <div class="stat reveal"><strong><em>SSC</em></strong><span>Permiso oficial vigente para prestar servicios de seguridad privada en CDMX</span></div>
   <div class="stat reveal" data-delay="1"><strong><span data-count="100">100</span><em>%</em></strong><span>De satisfacción de nuestros clientes</span></div>
-  <div class="stat reveal" data-delay="2"><strong><span data-count="26">26</span><em>+</em></strong><span>Años de experiencia de nuestro instructor en Krav Magá israelí</span></div>
+  <div class="stat reveal" data-delay="2"><strong><span data-count="2">2</span></strong><span>Modalidades autorizadas por la SSC: protección personal y vigilancia de bienes</span></div>
   <div class="stat reveal" data-delay="3"><strong><span data-count="7">7</span><em>+</em></strong><span>Instituciones públicas y empresas que confían en nosotros</span></div>
 </section>
 
@@ -531,12 +531,12 @@ capacitacion = head("Centro de Capacitación | Grupo Noos",
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <div class="reveal"><span class="eyebrow">Instructores</span><h2>Formados por los mejores</h2></div>
-      <p class="reveal" data-delay="1">Nuestros programas los imparten instructores con trayectoria internacional y aliados especializados.</p>
+      <div class="reveal"><span class="eyebrow">Aliados</span><h2>Formados por los mejores</h2></div>
+      <p class="reveal" data-delay="1">Nuestros programas los imparten aliados especializados en defensa personal, tiro y capacitación integral.</p>
     </div>
     <div class="people">
-      <div class="person reveal"><span class="role">Master Instructor · 4° Darga</span><h3>Viktor Nesharim <small style="display:block;font-size:.6em;color:var(--silver);margin-top:6px">Víctor Aguilar</small></h3>
-        <ul><li>26 años de experiencia en Krav Magá israelí.</li><li>Alumno directo del Gran Maestro Avi Abeceedon.</li><li>Egresado de The Academic College at Wingate, Israel.</li></ul></div>
+      <div class="person reveal"><span class="role">Defensa personal</span><h3>Asociación Mexicana de Krav Magá</h3>
+        <ul><li>Método israelí de defensa personal y combate cuerpo a cuerpo y armado.</li><li>Entrenamiento para elementos de seguridad privada, escoltas y custodios.</li></ul></div>
       <div class="person reveal" data-delay="1"><span class="role">Tiro defensivo</span><h3>Professional Shooter</h3>
         <ul><li>Prácticas de tiro en campo.</li><li>Manejo seguro de armas.</li><li>Simulador de tiro virtual.</li></ul></div>
       <div class="person reveal" data-delay="2"><span class="role">Aliado estratégico</span><h3>Yonhathan Achury</h3>
