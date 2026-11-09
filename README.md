@@ -36,8 +36,10 @@ Para verlo localmente: `python3 -m http.server` y abre http://localhost:8000
 
 ## Pendientes por confirmar con el cliente
 
-- **Correos**: siguen siendo `@croixrom.mx`. Cambiarlos cuando exista el dominio de Grupo Noos.
+- **Correos**: `ceo@gruponoos.mx` y `a.castaneda@gruponoos.mx`. Confirmar que el dominio `gruponoos.mx`
+  exista y que esos buzones reciban correo.
+- **Redes sociales**: los enlaces apuntan a `instagram.com/gruponoos` y `facebook.com/gruponoos`.
+  Confirmar los usuarios reales.
 - **WhatsApp**: se usa el 55 2378 1229. Confirmar que sea el número comercial.
-- **Redes sociales**: los enlaces apuntan a `@croixrom`. Actualizarlos a las cuentas de Grupo Noos.
-- **Permiso SSC 0911-20**: está a nombre de CROIXROM, S.A. de C.V. Confirmar que el cambio de nombre
-  ya esté reflejado ante la SSC antes de publicarlo como de Grupo Noos.
+- **Permiso SSC 0911-20**: confirmar que el cambio de razón social a Grupo Noos ya esté registrado ante
+  la SSC antes de publicarlo.
