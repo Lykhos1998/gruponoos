@@ -105,15 +105,21 @@ p { margin: 0 0 1em; color: rgba(240, 245, 239, 0.74); }
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 50;
   height: var(--header-h);
-  transition: background .3s, border-color .3s, backdrop-filter .3s;
+  transition: background .3s, border-color .3s;
   border-bottom: 1px solid transparent;
+  isolation: isolate;
 }
-.site-header.is-scrolled, .site-header.is-solid {
+/* El fondo con desenfoque va en una capa aparte: si el backdrop-filter estuviera en el header,
+   el menú móvil (position: fixed) quedaría atrapado dentro de él y no se vería al hacer scroll. */
+.site-header::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
   background: rgba(5, 8, 11, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-color: var(--line);
+  opacity: 0; transition: opacity .3s;
 }
+.site-header.is-scrolled, .site-header.is-solid { border-color: var(--line); }
+.site-header.is-scrolled::before, .site-header.is-solid::before { opacity: 1; }
 .site-header .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 12px; flex: none; }
 .brand img { width: 44px; height: auto; filter: drop-shadow(0 0 10px rgba(142,245,168,0.25)); }
@@ -159,7 +165,7 @@ p { margin: 0 0 1em; color: rgba(240, 245, 239, 0.74); }
   .nav {
     position: fixed; inset: var(--header-h) 0 0 0;
     flex-direction: column; align-items: stretch; gap: 0;
-    background: rgba(5,8,11,0.98);
+    background: var(--black);
     padding: 24px var(--gutter) 40px;
     transform: translateX(100%); transition: transform .4s var(--ease);
     overflow-y: auto;
@@ -169,7 +175,8 @@ p { margin: 0 0 1em; color: rgba(240, 245, 239, 0.74); }
   .nav a::after { left: 0; right: auto; width: 40px; bottom: -1px; }
   .nav .btn { margin: 28px 0 0; min-height: 56px; font-size: 1rem; border-bottom: 0; }
   .nav-open { overflow: hidden; }
-  .nav-open .site-header { background: rgba(5,8,11,0.98); }
+  .nav-open .site-header { background: var(--black); }
+  .nav-open .wa-float { opacity: 0; pointer-events: none; }
 }
 
 /* ---------- Hero (inicio) ---------- */
