@@ -181,18 +181,34 @@ def card(n, icon, title, text, href):
       </a>'''
 
 CLIENTS = [
- ("INAPESCA", "Instituto Nacional de Pesca y Acuacultura"),
- ("SEDATU", "Secretaría de Desarrollo Agrario, Territorial y Urbano"),
- ("SENASICA", "Servicio Nacional de Sanidad, Inocuidad y Calidad Agroalimentaria"),
- ("AEM", "Agencia Espacial Mexicana"),
- ("Metro CDMX", "Sistema de Transporte Colectivo"),
- ("Wandel", "Farmacéutica Wandel"),
- ("BIOMEP", "Sector salud"),
- ("Stratominds", "Potencializa tu mente"),
+ ("inapesca", "INAPESCA", "Instituto Nacional de Pesca y Acuacultura", "Gobierno federal"),
+ ("sedatu", "SEDATU", "Secretaría de Desarrollo Agrario, Territorial y Urbano", "Gobierno federal"),
+ ("senasica", "SENASICA", "Servicio Nacional de Sanidad, Inocuidad y Calidad Agroalimentaria", "Gobierno federal"),
+ ("aem", "AEM", "Agencia Espacial Mexicana", "Gobierno federal"),
+ ("metro", "Metro CDMX", "Sistema de Transporte Colectivo", "Gobierno CDMX"),
+ ("wandel", "Farmacéutica Wandel", "Industria farmacéutica", "Sector privado"),
+ ("biomep", "BIOMEP", "Sector salud", "Sector privado"),
+ ("stratominds", "Stratominds", "Potencializa tu mente", "Sector privado"),
 ]
 
-def client_items():
-    return "\n".join(f'        <div class="client"><strong>{a}</strong><span>{b}</span></div>' for a, b in CLIENTS)
+def logo_tile(slug, name, hidden=False):
+    alt = "" if hidden else name
+    return (f'<div class="logo-tile"{" aria-hidden=\"true\"" if hidden else ""}>'
+            f'<img class="mono" src="assets/img/clientes/{slug}-mono.webp" alt="{alt}" loading="lazy">'
+            f'<img class="color" src="assets/img/clientes/{slug}.webp" alt="" loading="lazy"></div>')
+
+def logo_marquee(rev=False):
+    items = CLIENTS[::-1] if rev else CLIENTS
+    row = "".join(logo_tile(c[0], c[1], hidden=rev) for c in items)
+    dup = "".join(logo_tile(c[0], c[1], hidden=True) for c in items)
+    return f'    <div class="logo-marquee{" rev" if rev else ""}"><div class="logo-track">{row}{dup}</div></div>'
+
+def client_cards():
+    return "\n".join(
+        f'''      <figure class="client-card reveal" data-delay="{i % 4}">
+        {logo_tile(slug, name)}
+        <figcaption><span class="sector">{sector}</span><strong>{name}</strong><small>{desc}</small></figcaption>
+      </figure>''' for i, (slug, name, desc, sector) in enumerate(CLIENTS))
 
 PROCESS = [
  ("Diseño", "Diagnóstico de riesgos y diseño de la estrategia a la medida."),
@@ -300,10 +316,16 @@ index = head("Grupo Noos | Seguridad Privada en CDMX",
       <p class="reveal" data-delay="1">Hemos dado servicio a dependencias de gobierno federal y local, y a empresas del sector privado.</p>
     </div>
   </div>
-  <div class="marquee reveal">
-    <div class="marquee-track">
-{client_items()}
-{client_items().replace('class="client"', 'class="client" aria-hidden="true"')}
+  <div class="logo-wall reveal">
+{logo_marquee()}
+{logo_marquee(rev=True)}
+  </div>
+  <div class="wrap">
+    <div class="sector-strip reveal">
+      <span><strong>4</strong> dependencias federales</span>
+      <span><strong>1</strong> organismo de la CDMX</span>
+      <span><strong>3</strong> empresas privadas</span>
+      <a class="link-arrow" href="nosotros.html#clientes">Ver todos {I["arrow"]}</a>
     </div>
   </div>
 </section>
@@ -405,8 +427,8 @@ nosotros = head("Nosotros | Grupo Noos Seguridad Privada",
       <div class="reveal"><span class="eyebrow">Experiencia</span><h2>Nuestros principales clientes</h2></div>
       <p class="reveal" data-delay="1">Dependencias de gobierno y empresas privadas que han confiado su seguridad a nuestro equipo.</p>
     </div>
-    <div class="client-grid reveal">
-{client_items()}
+    <div class="client-cards">
+{client_cards()}
     </div>
   </div>
 </section>
