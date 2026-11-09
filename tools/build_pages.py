@@ -237,7 +237,7 @@ index = head("Grupo Noos | Seguridad Privada en CDMX",
         <a class="btn btn-ghost" href="servicios.html">Ver servicios</a>
       </div>
       <div class="hero-meta reveal" data-delay="3">
-        <span>Permiso SSC CDMX</span><span>Elementos certificados</span><span>Atención personalizada</span>
+        <span>Permiso Federal de Seguridad Privada</span><span>Elementos certificados</span><span>Atención personalizada</span>
       </div>
     </div>
     <div class="hero-badge">
