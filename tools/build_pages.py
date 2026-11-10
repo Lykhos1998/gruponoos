@@ -44,6 +44,12 @@ NAV = [
  ("equipamiento.html", "Equipamiento"),
 ]
 
+import hashlib
+
+def asset_v(path):
+    """Huella corta del archivo: cambia cuando cambia el contenido, así el navegador baja la versión nueva."""
+    return hashlib.sha1((pathlib.Path(__file__).resolve().parent.parent / path).read_bytes()).hexdigest()[:10]
+
 def head(title, desc, page):
     return f'''<!doctype html>
 <html lang="es-MX" class="no-js">
@@ -63,7 +69,7 @@ def head(title, desc, page):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/styles.css?v={asset_v("assets/css/styles.css")}">
 </head>
 <body>
 <a class="sr-only" href="#main">Saltar al contenido</a>
@@ -155,7 +161,7 @@ FOOTER = f'''</main>
 </footer>
 
 <a class="wa-float" href="https://wa.me/{WA}" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">{I["wa"]}</a>
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v={asset_v("assets/js/main.js")}" defer></script>
 </body>
 </html>
 '''
