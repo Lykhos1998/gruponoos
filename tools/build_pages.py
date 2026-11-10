@@ -16,6 +16,8 @@ ADDR1 = "Blvd. Adolfo Ruiz Cortines 3720, Torre II, Piso 8, Col. Jardines del Pe
 ADDR2 = "Saturnino Herrán 17, Col. San José Insurgentes, Alcaldía Benito Juárez, C.P. 03900, CDMX"
 
 I = {
+ "brain": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 3 3h1V4z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-3 3h-1V4z"/><path d="M10 9H8M14 9h2M10 15H8M14 15h2"/></svg>',
+ "radar": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12 18.5 5.5"/><circle cx="15.5" cy="9" r="1" fill="currentColor"/></svg>',
  "arrow": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg>',
  "shield": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>',
  "building": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V4h10v17M14 9h6v12M2 21h20M7 8h1M10 8h1M7 12h1M10 12h1M7 16h1M10 16h1M17 13h1M17 17h1"/></svg>',
@@ -222,22 +224,22 @@ def process():
     return f'    <div class="process">\n{s}\n    </div>'
 
 # ---------------------------------------------------------------- INICIO
-index = head("Grupo Noos | Seguridad Privada en CDMX",
-  "Grupo Noos: seguridad privada, escoltas, seguridad intramuros, capacitación táctica y consultoría en seguridad. Permiso SSC CDMX 0911-20.", "index.html") + header("index.html") + f'''
+index = head("Grupo Noos | Seguridad Privada Inteligente en CDMX",
+  "Grupo Noos: servicio inteligente de seguridad privada. Elementos capacitados, tecnología y análisis de riesgos para prevenir incidentes. Intramuros, escoltas y consultoría en CDMX.", "index.html") + header("index.html") + f'''
 <section class="hero">
   <div class="hero-bg"><img src="assets/img/equipo-noos.webp" alt="" fetchpriority="high"></div>
   <div class="grid-overlay"></div>
   <div class="wrap hero-inner">
     <div>
-      <span class="eyebrow reveal">Seguridad privada · CDMX</span>
-      <h1 class="reveal" data-delay="1">Su seguridad es nuestra <span class="hl">prioridad</span>.</h1>
-      <p class="lead reveal" data-delay="2">Confíela en las mejores manos. Creamos soluciones integrales de seguridad con elementos capacitados, tecnología y estrategia, para que su organización cumpla sus objetivos sin preocupaciones.</p>
+      <span class="eyebrow reveal">Servicio inteligente de seguridad</span>
+      <h1 class="reveal" data-delay="1">Seguridad <span class="hl">inteligente</span> para lo que más importa.</h1>
+      <p class="lead reveal" data-delay="2">Elementos capacitados que usan tecnología y análisis de riesgos para anticiparse a los incidentes, no solo para reaccionar ante ellos. Su seguridad es nuestra prioridad.</p>
       <div class="btn-row reveal" data-delay="3">
         <a class="btn btn-primary" href="contacto.html">Solicitar cotización {I["arrow"]}</a>
         <a class="btn btn-ghost" href="servicios.html">Ver servicios</a>
       </div>
       <div class="hero-meta reveal" data-delay="3">
-        <span>Permiso Federal de Seguridad Privada</span><span>Elementos certificados</span><span>Atención personalizada</span>
+        <span>Permiso Federal de Seguridad Privada</span><span>Elementos certificados</span><span>Tecnología aplicada</span>
       </div>
     </div>
     <div class="hero-badge">
@@ -256,25 +258,77 @@ index = head("Grupo Noos | Seguridad Privada en CDMX",
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head">
-      <div class="reveal">
-        <span class="eyebrow">Servicios</span>
-        <h2>Soluciones integrales de seguridad</h2>
-      </div>
-      <p class="reveal" data-delay="1">Un equipo interdisciplinario, con experiencia en el sector público y privado, que piensa cada solución desde una óptica estratégica: del análisis a la implementación, la evaluación y la actualización.</p>
+    <div class="section-head center">
+      <span class="eyebrow reveal">Nuestro enfoque</span>
+      <h2 class="reveal">Seguridad que se <span class="hl">anticipa</span></h2>
+      <p class="lead reveal" data-delay="1" style="margin:0 auto">Reducir el riesgo exige criterio, información y las herramientas correctas. Por eso nuestro modelo se apoya en tres pilares.</p>
     </div>
-    <div class="cards">
-{card(1,"building","Seguridad intramuros","Resguardo de edificios corporativos, plazas e instalaciones de gobierno, con y sin arma.","servicios.html#intramuros")}
-{card(2,"car","Escoltas y protección personal","Escoltas profesionales con licencia de portación incluida y vehículo escolta.","servicios.html#escoltas")}
-{card(3,"chart","Consultoría y estudios de seguridad","Estrategias con enfoque organizacional: análisis de riesgos, protocolos y mejora continua.","servicios.html#consultoria")}
-{card(4,"target","Centro de capacitación","Krav Magá israelí, tiro y formación integral para elementos de seguridad y escoltas.","capacitacion.html")}
-{card(5,"camera","Tecnología y monitoreo","Videovigilancia inteligente, LPR, centros de control C4i/C5i y ciberseguridad.","tecnologia.html")}
-{card(6,"event","Logística de grandes eventos","Diseño, planeación y ejecución logística de eventos y producciones a gran escala.","servicios.html#eventos")}
+    <div class="pillars">
+      <article class="pillar reveal">
+        <span class="pillar-icon">{I["brain"]}</span>
+        <span class="pillar-num">01</span>
+        <h3>Personas preparadas</h3>
+        <p>Elementos seleccionados y capacitados para observar, comunicar y tomar buenas decisiones bajo presión.</p>
+      </article>
+      <article class="pillar reveal" data-delay="1">
+        <span class="pillar-icon">{I["camera"]}</span>
+        <span class="pillar-num">02</span>
+        <h3>Tecnología aplicada</h3>
+        <p>Videovigilancia, lectura de placas, radiocomunicación y centros de control que amplían lo que un elemento puede ver.</p>
+      </article>
+      <article class="pillar reveal" data-delay="2">
+        <span class="pillar-icon">{I["radar"]}</span>
+        <span class="pillar-num">03</span>
+        <h3>Análisis de riesgos</h3>
+        <p>Diagnosticamos cada sitio antes de operar y actualizamos la estrategia con lo que registramos día a día.</p>
+      </article>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare-col old">
+        <span class="compare-tag">Enfoque tradicional</span>
+        <ul>
+          <li>Reacciona cuando el incidente ya ocurrió.</li>
+          <li>Depende de la presencia y la fuerza física.</li>
+          <li>Vigilancia pasiva, sin información.</li>
+          <li>Poca comunicación con el cliente.</li>
+        </ul>
+      </div>
+      <div class="compare-vs" aria-hidden="true">VS</div>
+      <div class="compare-col new">
+        <span class="compare-tag">Seguridad inteligente Noos</span>
+        <ul>
+          <li>Previene: identifica riesgos antes de que escalen.</li>
+          <li>Depende del criterio y la capacitación del elemento.</li>
+          <li>Vigilancia apoyada en tecnología.</li>
+          <li>Supervisión, reportes y seguimiento constante.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow">Servicios</span>
+        <h2>Soluciones que reducen el riesgo</h2>
+      </div>
+      <p class="reveal" data-delay="1">Un equipo interdisciplinario, con experiencia en el sector público y privado, que piensa cada solución desde una óptica estratégica: del análisis a la implementación, la evaluación y la actualización.</p>
+    </div>
+    <div class="cards">
+{card(1,"building","Seguridad intramuros","Resguardo preventivo de edificios, plazas e instalaciones de gobierno, con protocolos, control de accesos y reportes.","servicios.html#intramuros")}
+{card(2,"car","Escoltas y protección personal","Protección ejecutiva basada en análisis de rutas y planeación, con licencia de portación incluida y vehículo escolta.","servicios.html#escoltas")}
+{card(3,"chart","Consultoría y estudios de seguridad","Estrategias con enfoque organizacional: análisis de riesgos, protocolos y mejora continua.","servicios.html#consultoria")}
+{card(4,"target","Centro de capacitación","Formación integral: prevención, protocolos, uso de tecnología, defensa personal y tiro.","capacitacion.html")}
+{card(5,"camera","Tecnología y monitoreo","Videovigilancia inteligente, lectura de placas (LPR), centros de control C4i/C5i y ciberseguridad.","tecnologia.html")}
+{card(6,"event","Logística de grandes eventos","Diseño, planeación y ejecución logística de eventos y producciones a gran escala.","servicios.html#eventos")}
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap split">
     <div class="split-media frame reveal">
       <img src="assets/img/escolta-vehiculo.webp" alt="Escolta de Grupo Noos junto a vehículo escolta" loading="lazy" width="1280" height="853">
@@ -282,12 +336,12 @@ index = head("Grupo Noos | Seguridad Privada en CDMX",
     </div>
     <div class="reveal" data-delay="1">
       <span class="eyebrow">¿Por qué Grupo Noos?</span>
-      <h2>Juventud y experiencia, con <span class="hl">disciplina</span> táctica</h2>
-      <p class="lead">Somos una empresa de vanguardia dedicada a crear soluciones integrales que ayuden a su organización a cumplir sus objetivos, con altos estándares de calidad y atención personalizada.</p>
+      <h2>Gente <span class="hl">preparada</span>, con herramientas tecnológicas</h2>
+      <p class="lead">Nuestro valor no está en la fuerza, sino en el criterio. Seleccionamos y capacitamos elementos capaces de observar, analizar y usar la tecnología para disminuir el riesgo de su organización.</p>
       <ul class="checklist">
-        <li>Permiso oficial de la Secretaría de Seguridad Ciudadana de la CDMX.</li>
-        <li>Elementos capacitados en defensa personal, combate cuerpo a cuerpo y tiro.</li>
-        <li>Equipamiento táctico profesional y unidades propias.</li>
+        <li>Elementos capacitados en prevención, protocolos y atención a incidentes.</li>
+        <li>Uso de videovigilancia, radiocomunicación y reportes para tomar mejores decisiones.</li>
+        <li>Análisis de riesgos antes de diseñar cada servicio.</li>
         <li>Supervisión constante y comunicación directa con su equipo.</li>
       </ul>
       <p style="margin-top:28px"><a class="link-arrow" href="nosotros.html">Conozca más de nosotros {I["arrow"]}</a></p>
@@ -295,7 +349,7 @@ index = head("Grupo Noos | Seguridad Privada en CDMX",
   </div>
 </section>
 
-<section class="section">
+<section class="section section-alt">
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow reveal">Metodología</span>
@@ -305,7 +359,7 @@ index = head("Grupo Noos | Seguridad Privada en CDMX",
   </div>
 </section>
 
-<section class="section section-alt" aria-label="Clientes">
+<section class="section" aria-label="Clientes">
   <div class="wrap">
     <div class="section-head">
       <div class="reveal">
@@ -329,19 +383,19 @@ index = head("Grupo Noos | Seguridad Privada en CDMX",
   </div>
 </section>
 
-<section class="section">
+<section class="section section-alt">
   <div class="wrap quote reveal">
-    <blockquote>El verdadero soldado no lucha porque odia lo que tiene delante, sino porque ama lo que tiene detrás.</blockquote>
-    <cite>G. K. Chesterton</cite>
+    <blockquote>La mejor amenaza es la que nunca llega a ocurrir.</blockquote>
+    <cite>Grupo Noos · Seguridad inteligente</cite>
   </div>
 </section>
 ''' + FOOTER
 
 # ---------------------------------------------------------------- NOSOTROS
 nosotros = head("Nosotros | Grupo Noos Seguridad Privada",
-  "Conozca a Grupo Noos: empresa de seguridad privada con permiso oficial SSC CDMX, equipo interdisciplinario y socios estratégicos en capacitación.", "nosotros.html") + header("nosotros.html") + page_hero(
-  "Nosotros", "Quiénes somos", 'Confíela en las <span class="hl">mejores manos</span>',
-  "Somos una empresa de vanguardia que integra juventud y experiencia para crear soluciones integrales de seguridad privada y logística.",
+  "Conozca a Grupo Noos: servicio inteligente de seguridad privada con permiso oficial, equipo interdisciplinario, tecnología y socios estratégicos en capacitación.", "nosotros.html") + header("nosotros.html") + page_hero(
+  "Nosotros", "Quiénes somos", 'Un servicio <span class="hl">inteligente</span> de seguridad',
+  "Integramos personas preparadas, tecnología y análisis de riesgos para proteger a su organización con criterio, no solo con presencia.",
   "equipo-noos.webp") + f'''
 <section class="section">
   <div class="wrap split">
@@ -365,7 +419,7 @@ nosotros = head("Nosotros | Grupo Noos Seguridad Privada",
     </div>
     <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))">
 {card(1,"shield","Elementos de seguridad intramuros y escoltas","Guardias para edificios e instalaciones, y protección personal con escoltas profesionales.","servicios.html")}
-{card(2,"life","Centro de capacitación y consultoría","Capacitación táctica, consultoría en seguridad y protección civil para su organización.","capacitacion.html")}
+{card(2,"life","Centro de capacitación y consultoría","Capacitación integral, consultoría en seguridad y protección civil para su organización.","capacitacion.html")}
     </div>
   </div>
 </section>
@@ -395,7 +449,7 @@ nosotros = head("Nosotros | Grupo Noos Seguridad Privada",
       <p class="reveal" data-delay="1">Trabajamos con especialistas reconocidos para que la capacitación de nuestros elementos sea integral.</p>
     </div>
     <div class="people">
-      <div class="person reveal"><span class="role">Defensa personal</span><h3>Asociación Mexicana de Krav Magá</h3><ul><li>Método israelí de defensa personal y combate cuerpo a cuerpo y armado.</li><li>Dirigido a elementos de seguridad privada, escoltas y custodios.</li></ul></div>
+      <div class="person reveal"><span class="role">Defensa personal</span><h3>Asociación Mexicana de Krav Magá</h3><ul><li>Método israelí de defensa personal, enfocado en el control de situaciones de riesgo.</li><li>Dirigido a elementos de seguridad privada, escoltas y custodios.</li></ul></div>
       <div class="person reveal" data-delay="1"><span class="role">Tiro</span><h3>Professional Shooter</h3><ul><li>Entrenamiento de tiro defensivo y manejo seguro de armas.</li><li>Prácticas en campo y simulador de tiro virtual.</li></ul></div>
       <div class="person reveal" data-delay="2"><span class="role">Capacitación integral</span><h3>Yonhathan Achury</h3><ul><li>Aliado estratégico para la capacitación integral de elementos de seguridad.</li></ul></div>
     </div>
@@ -459,8 +513,8 @@ def img(src, alt):
 PH = '<div class="ph frame"><img src="assets/img/logo-grupo-noos.webp" alt="" loading="lazy"></div>'
 
 servicios = head("Servicios | Grupo Noos Seguridad Privada",
-  "Seguridad intramuros, escoltas con licencia de portación, consultoría en seguridad, protección civil y logística de eventos en CDMX.", "servicios.html") + header("servicios.html") + page_hero(
-  "Servicios", "Lo que hacemos", 'Servicios de <span class="hl">seguridad</span> a la medida',
+  "Servicios de seguridad inteligente en CDMX: intramuros, escoltas con licencia de portación, consultoría y análisis de riesgos, protección civil y logística de eventos.", "servicios.html") + header("servicios.html") + page_hero(
+  "Servicios", "Lo que hacemos", 'Seguridad <span class="hl">inteligente</span> a la medida',
   "Desde el resguardo de un edificio hasta la protección personal de ejecutivos: diseñamos, planeamos e implementamos la estrategia que su organización necesita.",
   "escolta-vehiculo.webp") + f'''
 <section class="section" style="padding-top:clamp(24px,4vw,48px)">
@@ -469,7 +523,7 @@ servicios = head("Servicios | Grupo Noos Seguridad Privada",
  ["Guardias intramuros para oficinas, edificios e instalaciones de gobierno.","Control de accesos, rondines y bitácoras.","Servicio con y sin arma, según el nivel de riesgo.","Supervisión en sitio y reportes periódicos."],
  ["Vigilancia","Protección de bienes","Control de accesos"], img("guardias-estacionamiento.webp","Guardias de Grupo Noos en resguardo de estacionamiento"))}
 {sblock("escoltas",2,"Escoltas y protección personal","Escoltas profesionales con licencia de portación incluida, para ejecutivos, funcionarios y sus familias.",
- ["Escoltas con licencia de portación de arma incluida.","Vehículo escolta y traslados seguros.","Análisis de rutas y protocolos de protección.","Personal capacitado en Krav Magá y tiro defensivo."],
+ ["Escoltas con licencia de portación de arma incluida.","Vehículo escolta y traslados seguros.","Análisis de rutas y protocolos de protección.","Personal capacitado en prevención, manejo de crisis, defensa personal y tiro."],
  ["Protección ejecutiva","Vehículo escolta","Traslados"], img("escolta-vehiculo.webp","Escolta de Grupo Noos con vehículo escolta"), True)}
 {sblock("consultoria",3,"Consultoría y estudios de seguridad","Estrategias de seguridad con enfoque organizacional, pensadas desde una óptica estratégica y especializada.",
  ["Análisis y diagnóstico de riesgos.","Diseño de protocolos y planes de seguridad.","Implementación, evaluación y actualización de la estrategia.","Seguimiento y mejora continua."],
@@ -486,23 +540,23 @@ servicios = head("Servicios | Grupo Noos Seguridad Privada",
 
 # ---------------------------------------------------------------- CAPACITACIÓN
 capacitacion = head("Centro de Capacitación | Grupo Noos",
-  "Centro de capacitación táctica: Krav Magá israelí, combate cuerpo a cuerpo y armado, tiro y formación integral para elementos de seguridad y escoltas.", "capacitacion.html") + header("capacitacion.html") + page_hero(
-  "Capacitación", "Centro de capacitación", 'Elementos <span class="hl">entrenados</span> para responder',
-  "Formación integral para cuerpos de seguridad: defensa personal, combate cuerpo a cuerpo y armado, tiro y protocolos de protección.",
+  "Centro de capacitación de Grupo Noos: prevención, protocolos, uso de tecnología, defensa personal (Krav Magá) y tiro para elementos de seguridad y escoltas.", "capacitacion.html") + header("capacitacion.html") + page_hero(
+  "Capacitación", "Centro de capacitación", 'Elementos <span class="hl">preparados</span> para prevenir',
+  "Formamos elementos que piensan antes de actuar: prevención, protocolos, uso de tecnología, defensa personal y tiro.",
   "krav-panoramica.webp") + f'''
 <section class="section">
   <div class="wrap split">
     <div class="split-media reveal">
       <img class="frame" src="assets/img/krav-clase.webp" alt="Instructor de Krav Magá demostrando defensa con arma ante un grupo de elementos" loading="lazy" style="aspect-ratio:4/5;object-fit:cover">
-      <span class="media-tag">Combate cuerpo a cuerpo</span>
+      <span class="media-tag">Defensa personal</span>
     </div>
     <div class="reveal" data-delay="1">
       <span class="eyebrow">Krav Magá israelí</span>
-      <h2>Método israelí de defensa personal y combate <span class="hl">cuerpo a cuerpo y armado</span></h2>
-      <p class="lead">Dirigido a cuerpos de seguridad: elementos de seguridad privada, escoltas y custodios.</p>
+      <h2>Defensa personal con <span class="hl">criterio</span></h2>
+      <p class="lead">Krav Magá israelí aplicado a la seguridad privada: el objetivo es controlar la situación y proteger a las personas con el menor riesgo posible.</p>
       <ul class="checklist">
         <li>Defensa ante agresiones con y sin arma.</li>
-        <li>Control y neutralización de amenazas.</li>
+        <li>Control y desescalamiento de situaciones de riesgo.</li>
         <li>Respuesta bajo estrés en escenarios reales.</li>
         <li>Avalado por la Asociación Mexicana de Krav Magá.</li>
       </ul>
@@ -536,7 +590,7 @@ capacitacion = head("Centro de Capacitación | Grupo Noos",
     </div>
     <div class="people">
       <div class="person reveal"><span class="role">Defensa personal</span><h3>Asociación Mexicana de Krav Magá</h3>
-        <ul><li>Método israelí de defensa personal y combate cuerpo a cuerpo y armado.</li><li>Entrenamiento para elementos de seguridad privada, escoltas y custodios.</li></ul></div>
+        <ul><li>Método israelí de defensa personal, enfocado en el control de situaciones de riesgo.</li><li>Entrenamiento para elementos de seguridad privada, escoltas y custodios.</li></ul></div>
       <div class="person reveal" data-delay="1"><span class="role">Tiro defensivo</span><h3>Professional Shooter</h3>
         <ul><li>Prácticas de tiro en campo.</li><li>Manejo seguro de armas.</li><li>Simulador de tiro virtual.</li></ul></div>
       <div class="person reveal" data-delay="2"><span class="role">Aliado estratégico</span><h3>Yonhathan Achury</h3>
@@ -579,7 +633,7 @@ def techrow(img_, alt, eyebrow, title, items, reverse=False):
 
 tecnologia = head("Tecnología | Grupo Noos Seguridad Privada",
   "Videovigilancia inteligente, arcos LPR, centros de control C4i y C5i, ciberseguridad, seguridad penitenciaria y patrullas inteligentes.", "tecnologia.html") + header("tecnologia.html") + page_hero(
-  "Tecnología", "Tecnología", 'Inteligencia que <span class="hl">vigila</span> 24/7',
+  "Tecnología", "Tecnología", 'Tecnología que <span class="hl">multiplica</span> la vigilancia',
   "Integramos tecnología de punta a nuestras estrategias de seguridad: videovigilancia inteligente, centros de control y patrullas conectadas.",
   "tec-control.webp") + f'''
 <section class="section">
@@ -600,8 +654,8 @@ def gear(src, title, text):
 
 equipamiento = head("Equipamiento y Unidades | Grupo Noos",
   "Uniformes tácticos, equipamiento 5.11, chalecos antibalas nivel III y IIIA, casco balístico y unidades de Grupo Noos.", "equipamiento.html") + header("equipamiento.html") + page_hero(
-  "Equipamiento", "Equipamiento", 'Equipados para <span class="hl">cualquier</span> escenario',
-  "Nuestros elementos portan uniforme táctico, equipo de protección balística y cuentan con unidades propias para responder con rapidez.",
+  "Equipamiento", "Equipamiento", 'Equipo <span class="hl">profesional</span> en cada servicio',
+  "Uniforme profesional, equipo de protección y unidades propias: herramientas para que nuestros elementos trabajen de forma segura y eficiente.",
   "guardias-estacionamiento.webp") + f'''
 
 <section class="section">
